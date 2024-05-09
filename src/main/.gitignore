@@ -8,7 +8,7 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-src/main/resources/database.properties
+
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -72,6 +72,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+database.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
