@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/book}" th:object="${book}">
+
+    <label for="name">Введите название книги: </label>
+    <input type="text" th:field="*{name}" user_id="name"/>
+    <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+        name error
+    </div>
+    <br>
+
+    <label for="author">Введите автора: </label>
+    <input type="text" th:field="*{author}" user_id="author"/>
+    <div th:if="${#fields.hasErrors('author')}" th:errors="*{author}">
+        author error
+    </div>
+    <br>
+
+    <label for="year">Введите год: </label>
+    <input type="text" th:field="*{year}" user_id="year"/>
+    <div th:if="${#fields.hasErrors('year')}" th:errors="*{year}">
+        year error
+    </div>
+    <br>
+    <input type="submit" value="Создать!">
+
+</form>
+
+</body>
+</html>

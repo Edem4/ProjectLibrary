@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+<h1>Список читателей</h1>
+<br>
+<div th:each="person : ${user}">
+    <a th:href="@{/person/{user_id}(user_id=${person.getUser_id()})}"
+       th:text="${person.getFullName() + ', ' +person.getYear()}">user</a>
+</div>
+<br>
+<hr/>
+<form th:method="GET" th:action="@{/person/new}">
+    <input type="submit" value="Добавить читателя">
+</form>
+<hr/>
+<a href="/projectLib1/book">Список Книг</a>
+<br>
+</body>
+</html>
